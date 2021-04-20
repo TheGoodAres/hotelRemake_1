@@ -26,8 +26,8 @@ public class Main {
                 case "V" -> displayAll(hotel);
                 case "T" -> inLoop = false;
                 case "D" -> deleteCustomer(hotel);
-                /*case "F" -> findCustomer(hotel);
-                case "O" -> showAlphabetical(hotel);
+                case "F" -> findCustomer(hotel);
+                /*case "O" -> showAlphabetical(hotel);
                 case "L" -> readFromFile(hotel);
                 case "S" -> writeToFile(hotel);*/
                 default -> System.out.println("Please try again!\n");
@@ -49,5 +49,8 @@ public class Main {
     static void deleteCustomer(Hotel hotel)
     {
 
+    }
+    static void findCustomer(Hotel hotel)
+    {
     }
 }
