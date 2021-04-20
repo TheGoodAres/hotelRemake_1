@@ -25,8 +25,8 @@ public class Main {
                 case "A" -> addCustomer(hotel);
                 case "V" -> displayAll(hotel);
                 case "T" -> inLoop = false;
-                /*case "D" -> deleteCustomer(hotel);
-                case "F" -> findCustomer(hotel);
+                case "D" -> deleteCustomer(hotel);
+                /*case "F" -> findCustomer(hotel);
                 case "O" -> showAlphabetical(hotel);
                 case "L" -> readFromFile(hotel);
                 case "S" -> writeToFile(hotel);*/
@@ -45,5 +45,9 @@ public class Main {
     static void addCustomer(Hotel hotel)
     {
         hotel.addCustomer();
+    }
+    static void deleteCustomer(Hotel hotel)
+    {
+
     }
 }
