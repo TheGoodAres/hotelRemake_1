@@ -1,26 +1,25 @@
 package com.company;
 
 import java.util.*;
-public class  Main {
+
+public class Main {
     static Scanner in = new Scanner(System.in);
-    public static void main(String[] args)
-    {
+
+    public static void main (String[] args) {
         System.out.print("Welcome to the ENTER_HOTEL_NAME_HERE!\n");
         Hotel hotel = new Hotel();
         String userInput;
         boolean inLoop = true;
-        while (inLoop)
-        {
+        while (inLoop) {
             System.out.print("""
-                Please enter A to add a new customer to a room, V to view all rooms
-                E to view all empty rooms, D to delete customer from room,
-                F to find room from customer name, S to store program data into file
-                L to load program data from file, O to view guests ordered alphabetically
-                or T to terminate the program:""");
+                    Please enter A to add a new customer to a room, V to view all rooms
+                    E to view all empty rooms, D to delete customer from room,
+                    F to find room from customer name, S to store program data into file
+                    L to load program data from file, O to view guests ordered alphabetically
+                    or T to terminate the program:""");
             userInput = in.next();
 
-            switch (userInput.toUpperCase())
-            {
+            switch (userInput.toUpperCase()) {
                 case "E" -> displayE(hotel);
                 case "A" -> addCustomer(hotel);
                 case "V" -> displayAll(hotel);
@@ -34,24 +33,24 @@ public class  Main {
             }
         }
     }
-    static void displayE(Hotel hotel)
-    {
+
+    static void displayE (Hotel hotel) {
         hotel.displayE();
     }
-    static void displayAll(Hotel hotel)
-    {
+
+    static void displayAll (Hotel hotel) {
         hotel.displayAll();
     }
-    static void addCustomer(Hotel hotel)
-    {
+
+    static void addCustomer (Hotel hotel) {
         hotel.addCustomer();
     }
-    static void deleteCustomer(Hotel hotel)
-    {
+
+    static void deleteCustomer (Hotel hotel) {
         hotel.deleteCustomer();
     }
-    static void findCustomer(Hotel hotel)
-    {
+
+    static void findCustomer (Hotel hotel) {
         hotel.findCustomer();
     }
 }

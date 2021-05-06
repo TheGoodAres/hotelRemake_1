@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Hotel
 {
@@ -112,7 +112,60 @@ public class Hotel
     }
     public void findCustomer()
     {
+        String firstName = firstName();
+        String lastName = lastName();
+        boolean found = false;
+        for (int i = 0; i < ROOM_NUMBER; i++){
+            if(firstName.equals(rooms[i].getFirstName()) && lastName.equals(rooms[i].getLastName())) {
+                System.out.printf("%s %s is in room %d.\n", firstName, lastName, i + 1);
+                found = true;
+                boolean loop = true;
+                do {
+                    System.out.print("Would you like to see the credit card details for the guest?");
+                    String answer = in.next();
+                    if (answer.equalsIgnoreCase("yes")) {
+                        System.out.println("Card Number: " + rooms[i].getCardNumber());
+                        loop = false;
+                    }
+                    if (answer.equalsIgnoreCase("no")) {
+                        loop = false;
+                    }
+                } while (loop);
+            }
 
+        }
+        if(!found){
+            System.out.println("The guest wasn't found!");
+        }
+        System.out.println();
     }
-
+    private String firstName()
+    {
+        String firstName;
+        boolean loop = true;
+        do
+        {
+            System.out.print("Please enter the first name of the person:");
+            firstName  = in.next();
+            if (!(firstName.length() <2) && !firstName.matches(".*\\d.*"))
+            {
+                loop = false ;
+            }
+        } while(loop);
+        return firstName;
+    }
+    private String lastName(){
+        String lastName;
+        boolean loop = true;
+        do
+        {
+            System.out.print("Please enter the last name of the person:");
+            lastName  = in.next();
+            if (!(lastName.length() <2) && !lastName.matches(".*\\d.*"))
+            {
+                loop = false ;
+            }
+        } while(loop);
+        return lastName;
+    }
 }
