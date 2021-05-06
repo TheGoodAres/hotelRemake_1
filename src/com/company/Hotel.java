@@ -37,6 +37,7 @@ public class Hotel
                 }
                 else if(a.equals("a"))
                 {
+
                     if (!rooms[roomNum-1].getFirstName().equals(""))
                     {
                         System.out.println("This room is already occupied, please try another room!");
@@ -96,7 +97,21 @@ public class Hotel
     }
     public void addCustomer()
     {
+
         int roomNumber = userGetRoomNumber(ADD);
+        if(roomNumber != ROOM_NUMBER)
+        {
+            rooms[roomNumber].add();
+        }
+        System.out.println();
+    }
+    public void deleteCustomer()
+    {
+        int roomNumber = userGetRoomNumber(DELETE);
+        rooms[roomNumber].delete();
+    }
+    public void findCustomer()
+    {
 
     }
 

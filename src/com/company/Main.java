@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.*;
-public class Main {
+public class  Main {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args)
     {
@@ -16,7 +16,7 @@ public class Main {
                 E to view all empty rooms, D to delete customer from room,
                 F to find room from customer name, S to store program data into file
                 L to load program data from file, O to view guests ordered alphabetically
-                or T to terminate the program: """);
+                or T to terminate the program:""");
             userInput = in.next();
 
             switch (userInput.toUpperCase())
@@ -48,9 +48,10 @@ public class Main {
     }
     static void deleteCustomer(Hotel hotel)
     {
-
+        hotel.deleteCustomer();
     }
     static void findCustomer(Hotel hotel)
     {
+        hotel.findCustomer();
     }
 }

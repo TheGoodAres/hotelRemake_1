@@ -75,6 +75,17 @@ public class Room
     {
         return guest.getCardNumber();
     }
-
+    public int getNumberOfGuests () {
+        return numberOfGuests;
+    }
+    public void delete()
+    {
+        guest.delete();
+    }
+    public void add() {
+        setFirstName();
+        setLastName();
+        setCardNumber();
+    }
 
 }

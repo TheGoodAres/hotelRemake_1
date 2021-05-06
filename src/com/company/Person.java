@@ -113,4 +113,10 @@ public class Person
     {
         return cardNumber;
     }
+
+    public void delete(){
+        firstName = "";
+        lastName = "";
+        cardNumber = 0L;
+    }
 }
